@@ -11,43 +11,54 @@ This guide provides step-by-step instructions on how to install Golang version 1
 ### 1. Step
 Connect to your server.
 
-### 2. Step
+#### FAST SETUP 
+```
+cd $HOME
+wget "https://golang.org/dl/go1.20.3.linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf "go1.20.3.linux-amd64.tar.gz"
+rm "go1.20.3.linux-amd64.tar.gz"
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+
+### Explanation
 Navigate to the home directory by executing the following command:
 `cd $HOME`
 
-### 3. Step
-Download the Golang installation package (`version 1.20.2` or `version 1.20.3`  if you prefer) for Linux by running the following command: `wget https://golang.org/dl/go1.20.2.linux-amd64.tar.gz`
+### Explanation
+Download the Golang installation package (`version 1.20.2` or `version 1.20.3`  if you prefer) for Linux by running the following command: `wget https://golang.org/dl/go1.20.3.linux-amd64.tar.gz`
  
 
-### 4. Step
+### Explanation
 Remove any existing Golang installation from the /usr/local directory using the following command:
 `sudo rm -rf /usr/local/go`
 
-### 5. Step
+### Explanation
 Extract the downloaded Golang package to the /usr/local directory with the following command:
-`sudo tar -C /usr/local -xzf "go1.20.2.linux-amd64.tar.gz"`
+`sudo tar -C /usr/local -xzf "go1.20.3.linux-amd64.tar.gz"`
 
-### 6. Step
+### Explanation
 Clean up the downloaded installation package by executing the following command:
-`rm "go1.20.2.linux-amd64.tar.gz"`
+`rm "go1.20.3.linux-amd64.tar.gz"`
 
-### 7. Step
+### Explanation
 Update your $PATH environment variable to include the path to the Go binary files (typically /usr/local/go/bin) and the Go workspace's binary directory ($HOME/go/bin). To do this, add the following line to your shell's configuration file (e.g., ~/.bash_profile) by running the command:
 `echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile`
 
-### 8. Step
+### Explanation
 Apply the changes to your current shell session by executing the following command:
 `source $HOME/.bash_profile`
 
 
 
-At this point, you have successfully installed Golang version 1.20.2 on your Linux system and updated the $PATH environment variable.
+At this point, you have successfully installed Golang version 1.20.3 on your Linux system and updated the $PATH environment variable.
 
 To verify your installation, run the following command:
 
 `go version`
 
-This command should display the installed Golang version, which should be "go1.20.2".
+This command should display the installed Golang version, which should be "go1.20.3".
 
 
 #  PLEASE CLONE THE REPO MAKE SURE YOU HAVE GIT ON YOUR SERVER
