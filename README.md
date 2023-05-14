@@ -22,31 +22,31 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-### Explanation
+### Step 2 - Explanation
 Navigate to the home directory by executing the following command:
 `cd $HOME`
 
-### Explanation
-Download the Golang installation package (`version 1.20.2` or `version 1.20.3`  if you prefer) for Linux by running the following command: `wget https://golang.org/dl/go1.20.3.linux-amd64.tar.gz`
+#### Explanation
+Download the Golang installation package (`version 1.20.3` or `version 1.20.2`  if you prefer) for Linux by running the following command: `wget https://golang.org/dl/go1.20.3.linux-amd64.tar.gz`
  
 
-### Explanation
+#### Explanation
 Remove any existing Golang installation from the /usr/local directory using the following command:
 `sudo rm -rf /usr/local/go`
 
-### Explanation
+#### Explanation
 Extract the downloaded Golang package to the /usr/local directory with the following command:
 `sudo tar -C /usr/local -xzf "go1.20.3.linux-amd64.tar.gz"`
 
-### Explanation
+#### Explanation
 Clean up the downloaded installation package by executing the following command:
 `rm "go1.20.3.linux-amd64.tar.gz"`
 
-### Explanation
+#### Explanation
 Update your $PATH environment variable to include the path to the Go binary files (typically /usr/local/go/bin) and the Go workspace's binary directory ($HOME/go/bin). To do this, add the following line to your shell's configuration file (e.g., ~/.bash_profile) by running the command:
 `echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile`
 
-### Explanation
+#### Explanation
 Apply the changes to your current shell session by executing the following command:
 `source $HOME/.bash_profile`
 
