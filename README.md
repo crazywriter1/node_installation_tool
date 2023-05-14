@@ -117,8 +117,11 @@ curl -X POST \
 
 `systemctl stop celestia-lightd` - stop your node
 
+
+
 # Congratulations, Celestia node has been successfully launched.
 
+![WhatsApp Image 2023-05-14 at 19 05 26](https://github.com/crazywriter1/light_node_installation_tool/assets/53251494/bae3b367-16fb-4804-b4ec-17a8605ee9dd)
 
 
 
