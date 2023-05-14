@@ -16,8 +16,8 @@ Navigate to the home directory by executing the following command:
 `cd $HOME`
 
 ### 3. Step
-Download the Golang installation package (version 1.20.2) for Linux by running the following command:
-`wget https://golang.org/dl/go1.20.2.linux-amd64.tar.gz`
+Download the Golang installation package (`version 1.20.2` or `version 1.20.3`  if you prefer) for Linux by running the following command: `wget https://golang.org/dl/go1.20.2.linux-amd64.tar.gz`
+ 
 
 ### 4. Step
 Remove any existing Golang installation from the /usr/local directory using the following command:
@@ -56,6 +56,7 @@ This command should display the installed Golang version, which should be "go1.2
 
 ## Install Packages
 
+`cd light_node_installation_tool` 
 `go mod tidy`
 
 ## Run the Tool
@@ -79,6 +80,43 @@ NAME: my_celes_key
 ADDRESS: celestia1824ph5x5pgyt0pun57rn7uj0nvepx2gt9fsvat
 MNEMONIC (save this somewhere safe!!!):
 real snake ship month invest quality rigid script .......
+
+## Node ID 
+
+
+`AUTH_TOKEN=$(celestia light auth admin --p2p.network blockspacerace)`
+
+```
+curl -X POST \
+     -H "Authorization: Bearer $AUTH_TOKEN" \
+     -H 'Content-Type: application/json' \
+     -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' \
+     http://localhost:26658
+```
+     
+# Starting & Usefull Commands 
+
+## Start
+
+`cd celestia-node`
+
+`systemctl enable celestia-lightd`
+
+`systemctl start celestia-lightd` - start your node
+
+`journalctl -u celestia-lightd.service -f`  - for logs if das - das - header/store its working
+
+# Commands
+
+`celestia version` - check your celestia version
+
+`systemctl status celestia-lightd`  - check if your node running or not
+
+`systemctl restart celestia-lightd` - restart your node
+
+`systemctl stop celestia-lightd` - stop your node
+
+# Congratulations, Celestia node has been successfully launched.
 
 
 
