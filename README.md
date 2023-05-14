@@ -8,10 +8,10 @@ This guide provides step-by-step instructions on how to install Golang version 1
 
 # Installation Steps:
 
-### 1. Step
+## 1. Step
 Connect to your server.
 
-#### FAST SETUP 
+### FAST SETUP 
 ```
 cd $HOME
 wget "https://golang.org/dl/go1.20.3.linux-amd64.tar.gz"
@@ -22,7 +22,7 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-### Step 2 - Explanation
+#### Explanation
 Navigate to the home directory by executing the following command:
 `cd $HOME`
 
@@ -61,17 +61,17 @@ To verify your installation, run the following command:
 This command should display the installed Golang version, which should be "go1.20.3".
 
 
-#  PLEASE CLONE THE REPO MAKE SURE YOU HAVE GIT ON YOUR SERVER
+## 2. Step - PLEASE CLONE THE REPO MAKE SURE YOU HAVE GIT ON YOUR SERVER
 
 `git clone https://github.com/crazywriter1/light_node_installation_tool`
 
-## Install Packages
+## 3. Step - Install Packages
 
 `cd light_node_installation_tool` 
 
 `go mod tidy`
 
-## Run the Tool
+## 4. Step - Run the Tool
 
 `go run main.go`
 
@@ -93,7 +93,7 @@ ADDRESS: celestia1824ph5x5pgyt0pun57rn7uj0nvepx2gt9fsvat
 MNEMONIC (save this somewhere safe!!!):
 real snake ship month invest quality rigid script .......
 
-## Node ID 
+## 5. Step - Node ID 
 
 
 `AUTH_TOKEN=$(celestia light auth admin --p2p.network blockspacerace)`
