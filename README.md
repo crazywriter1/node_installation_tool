@@ -108,7 +108,7 @@ curl -X POST \
      
 # Starting & Usefull Commands 
 
-## Start
+## 6. Step - Start
 
 `cd celestia-node`
 
@@ -118,7 +118,7 @@ curl -X POST \
 
 `journalctl -u celestia-lightd.service -f`  - for logs if das - das - header/store its working
 
-# Commands
+### Commands
 
 `celestia version` - check your celestia version
 
