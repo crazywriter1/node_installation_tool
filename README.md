@@ -57,6 +57,7 @@ This command should display the installed Golang version, which should be "go1.2
 ## Install Packages
 
 `cd light_node_installation_tool` 
+
 `go mod tidy`
 
 ## Run the Tool
