@@ -61,13 +61,13 @@ This command should display the installed Golang version, which should be "go1.2
 
 ## 2. Step - PLEASE CLONE THE REPO MAKE SURE YOU HAVE GIT ON YOUR SERVER
 
-`git clone https://github.com/crazywriter1/light_node_installation_tool`
+```git clone https://github.com/crazywriter1/light_node_installation_tool```
 
 ## 3. Step - Install Packages
 
-`cd light_node_installation_tool` 
+```cd light_node_installation_tool``` 
 
-`go mod tidy`
+```go mod tidy```
 
 ## 4. Step - Run the Tool
 
@@ -111,42 +111,42 @@ curl -X POST \
 ## 6. Step - Start
 
 ### Light Node
-`cd celestia-node`
+```cd celestia-node```
 
-`systemctl enable celestia-lightd`
+```systemctl enable celestia-lightd```
 
-`systemctl start celestia-lightd` - start your node
+```systemctl start celestia-lightd``` - start your node
 
-`journalctl -u celestia-lightd.service -f`  - for logs if das - das - header/store its working
+```journalctl -u celestia-lightd.service -f```  - for logs if das - das - header/store its working
 
 ### Full Node
-`cd celestia-node`
+```cd celestia-node```
 
-`systemctl enable celestia-fulld`
+```systemctl enable celestia-fulld```
 
-`systemctl start celestia-fulld` - start your node
+```systemctl start celestia-fulld``` - start your node
 
-`journalctl -u celestia-fulld.service -f`  - for logs if das - das - header/store its working
+```journalctl -u celestia-fulld.service -f```  - for logs if das - das - header/store its working
 
 ## Commands
 
 ### Light Node
-`celestia version` - check your celestia version
+```celestia version``` - check your celestia version
 
-`systemctl status celestia-lightd`  - check if your node running or not
+```systemctl status celestia-lightd```  - check if your node running or not
 
-`systemctl restart celestia-lightd` - restart your node
+```systemctl restart celestia-lightd``` - restart your node
 
-`systemctl stop celestia-lightd` - stop your node
+```systemctl stop celestia-lightd``` - stop your node
 
 ### Full Node
-`celestia version` - check your celestia version
+```celestia version``` - check your celestia version
 
-`systemctl status celestia-fulld`  - check if your node running or not
+```systemctl status celestia-fulld`  - check if your node running or not
 
-`systemctl restart celestia-fulld` - restart your node
+```systemctl restart celestia-fulld``` - restart your node
 
-`systemctl stop celestia-fulld` - stop your node
+```systemctl stop celestia-fulld``` - stop your node
 
 
 # Congratulations, Celestia node has been successfully launched.
