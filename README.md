@@ -1,4 +1,4 @@
-# light_node_installation_tool
+# Node_installation_tool
 With that tool you can install your light or full node really easy
 
 
