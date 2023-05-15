@@ -68,7 +68,7 @@ git clone https://github.com/crazywriter1/node_installation_tool
 ## 3. Step - Install Packages
 
 ```
-cd light_node_installation_tool
+cd node_installation_tool
 ``` 
 
 ```
