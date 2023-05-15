@@ -79,8 +79,10 @@ This command should display the installed Golang version, which should be "go1.2
   
 2-) `Enter the port: 9090` 
  (default port)
- 
-3-)`Enter the network: blockspacerace`
+
+3-) `Enter your light type (light-full): <Node-Type>` (full or light)
+
+4-)`Enter the network: blockspacerace`
 
 # WARNING
 
