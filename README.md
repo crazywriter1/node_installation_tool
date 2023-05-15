@@ -1,5 +1,5 @@
 # light_node_installation_tool
-With that tool you can install your light node really easy
+With that tool you can install your light or full node really easy
 
 
 # Prerequisites:
@@ -96,7 +96,7 @@ real snake ship month invest quality rigid script .......
 ## 5. Step - Node ID 
 
 
-`AUTH_TOKEN=$(celestia light auth admin --p2p.network blockspacerace)`
+`AUTH_TOKEN=$(celestia <Node-Type> auth admin --p2p.network blockspacerace)`
 
 ```
 curl -X POST \
@@ -110,6 +110,7 @@ curl -X POST \
 
 ## 6. Step - Start
 
+### Light Node
 `cd celestia-node`
 
 `systemctl enable celestia-lightd`
@@ -118,8 +119,18 @@ curl -X POST \
 
 `journalctl -u celestia-lightd.service -f`  - for logs if das - das - header/store its working
 
-### Commands
+### Full Node
+`cd celestia-node`
 
+`systemctl enable celestia-fulld`
+
+`systemctl start celestia-fulld` - start your node
+
+`journalctl -u celestia-fulld.service -f`  - for logs if das - das - header/store its working
+
+## Commands
+
+### Light Node
 `celestia version` - check your celestia version
 
 `systemctl status celestia-lightd`  - check if your node running or not
@@ -128,6 +139,14 @@ curl -X POST \
 
 `systemctl stop celestia-lightd` - stop your node
 
+### Full Node
+`celestia version` - check your celestia version
+
+`systemctl status celestia-fulld`  - check if your node running or not
+
+`systemctl restart celestia-fulld` - restart your node
+
+`systemctl stop celestia-fulld` - stop your node
 
 
 # Congratulations, Celestia node has been successfully launched.
