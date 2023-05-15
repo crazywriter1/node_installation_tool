@@ -28,6 +28,10 @@ func main() {
 	port, _ := reader.ReadString('\n')
 	port = strings.TrimSpace(port)
 
+	fmt.Print("Enter your light type (light-full): ")
+	nodeType, _ := reader.ReadString('\n')
+	nodeType = strings.TrimSpace(nodeType)
+
 	fmt.Print("Enter the network: ")
 	network, _ := reader.ReadString('\n')
 	network = strings.TrimSpace(network)
@@ -46,7 +50,7 @@ func main() {
 		{"make install", celestiaNodeDir},
 		{"make cel-key", celestiaNodeDir},
 		{"celestia version", ""},
-		{"celestia light init --p2p.network " + network, ""},
+		{"celestia " + nodeType + " init --p2p.network " + network, ""},
 	}
 
 	for _, command := range commands {
@@ -57,21 +61,21 @@ func main() {
 		}
 	}
 
-	celestiaServiceCmd := fmt.Sprintf(`sudo tee <<EOF >/dev/null /etc/systemd/system/celestia-lightd.service
+	celestiaServiceCmd := fmt.Sprintf(`sudo tee <<EOF >/dev/null /etc/systemd/system/celestia-%sd.service
 [Unit]
-Description=celestia-lightd Light Node
+Description=celestia-%sd %s
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=/usr/local/bin/celestia light start --core.ip %s --core.rpc.port 26657 --core.grpc.port 9090 --keyring.accname my_celes_key --metrics.tls=false --metrics --metrics.endpoint otel.celestia.tools:4318 --gateway --gateway.addr localhost --gateway.port 26659 --p2p.network %s
+ExecStart=/usr/local/bin/celestia %s start --core.ip  https://rpc-blockspacerace.pops.one --core.rpc.port 26657 --core.grpc.port 9090 --keyring.accname my_celes_key --metrics.tls=false --metrics --metrics.endpoint otel.celestia.tools:4318 --gateway --gateway.addr %s --gateway.port 26659 --p2p.network %s
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=4096
 
 [Install]
 WantedBy=multi-user.target
-EOF`, ipAddress, network)
+EOF`, nodeType, nodeType, nodeType+" Node", nodeType, ipAddress, network)
 
 	err = runCommand(celestiaServiceCmd, "")
 	if err != nil {
