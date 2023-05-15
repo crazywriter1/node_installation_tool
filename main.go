@@ -45,7 +45,7 @@ func main() {
 		{"sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential git make ncdu -y", ""},
 		{"rm -rf celestia-node", homeDir},
 		{"git clone https://github.com/celestiaorg/celestia-node.git", homeDir},
-		{"git checkout tags/v0.9.3", celestiaNodeDir},
+		{"git checkout tags/v0.9.5", celestiaNodeDir},
 		{"make build", celestiaNodeDir},
 		{"make install", celestiaNodeDir},
 		{"make cel-key", celestiaNodeDir},
