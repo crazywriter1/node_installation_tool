@@ -61,7 +61,9 @@ This command should display the installed Golang version, which should be "go1.2
 
 ## 2. Step - PLEASE CLONE THE REPO MAKE SURE YOU HAVE GIT ON YOUR SERVER
 
-```git clone https://github.com/crazywriter1/light_node_installation_tool```
+```
+git clone https://github.com/crazywriter1/light_node_installation_tool
+```
 
 ## 3. Step - Install Packages
 
