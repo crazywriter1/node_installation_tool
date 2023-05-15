@@ -126,16 +126,16 @@ cd celestia-node
 ```
 systemctl enable celestia-lightd
 ```
+- start your node
 
 ```
 systemctl start celestia-lightd
 ```
-- start your node
+- for logs if das - das - header/store its working
 
 ```
 journalctl -u celestia-lightd.service -f
 ```  
-- for logs if das - das - header/store its working
 
 ### Full Node
 ```
@@ -145,59 +145,62 @@ cd celestia-node
 ```
 systemctl enable celestia-fulld
 ```
+- start your node
 
 ```
 systemctl start celestia-fulld
 ```
-- start your node
+- for logs if das - das - header/store its working
 
 ```
 journalctl -u celestia-fulld.service -f
 ```  
-- for logs if das - das - header/store its working
 
 ## Commands
 
 ### Light Node
+- check your celestia version
+
 ```
 celestia version
 ``` 
-- check your celestia version
+- check if your node running or not
 
 ```
 systemctl status celestia-lightd
 ``` 
-- check if your node running or not
+- restart your node
 
 ```
 systemctl restart celestia-lightd
 ```
-- restart your node
+- stop your node
 
 ```
 systemctl stop celestia-lightd
 ``` 
-- stop your node
 
 ### Full Node
+- check your celestia version
 ```
 celestia version
 ```
-- check your celestia version
 
-```systemctl status celestia-fulld
-``` 
 - check if your node running or not
 
 ```
-systemctl restart celestia-fulld
+systemctl status celestia-fulld
 ``` 
 - restart your node
 
 ```
+systemctl restart celestia-fulld
+``` 
+- stop your node
+
+```
 systemctl stop celestia-fulld
 ```
-- stop your node
 
 
 # Congratulations, Celestia node has been successfully launched.
